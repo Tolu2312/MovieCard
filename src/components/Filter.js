@@ -1,18 +1,19 @@
-// Filter.js
 import React from 'react';
 
-const Filter = ({ onFilterChange }) => {
+const Filter = ({ filterTitle, filterRating, handleTitleChange, handleRatingChange }) => {
   return (
     <div className="filter">
       <input
         type="text"
-        placeholder="Filter by title..."
-        onChange={(e) => onFilterChange('title', e.target.value)}
+        placeholder="Filter by title"
+        value={filterTitle}
+        onChange={handleTitleChange}
       />
       <input
         type="number"
-        placeholder="Filter by rating..."
-        onChange={(e) => onFilterChange('rating', e.target.value)}
+        placeholder="Filter by rating"
+        value={filterRating}
+        onChange={handleRatingChange}
       />
     </div>
   );
